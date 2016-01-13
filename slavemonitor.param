@@ -1,0 +1,65 @@
+[Enabled]
+Type=boolean
+Category=Options
+CategoryOrder=0
+Index=0
+Label=Enabled
+Default=false
+Description=If this event plugin is enabled.
+
+[Logging]
+Type=enum
+Values=all;garbage;trace;debug;info;warning;error;critical;quiet;
+Category=Options
+CategoryOrder=0
+Index=1
+Default=info
+Label=Verbose Logging Level
+Description=Logging Level of slavemonitor
+
+[CatchNonZero]
+Type=boolean
+Category=Non-zero Error Code
+CategoryOrder=1
+Index=0
+Label=Catch Non-zero Error Code
+Default=true
+Description=Restart a slave on the first non-zero error code (-1073740777)
+
+[NonZeroAction]
+Type=enum
+Values=blacklist;relaunch_slave;restart_machine
+Category=Non-zero Error Code
+CategoryOrder=1
+Index=1
+Label=When non-zero error code reported
+Default=relaunch_slave
+Description=Action to perform when a non-zero error code is reported
+
+[UseErrorThreshold]
+Type=boolean
+Category=Error Threshold
+CategoryOrder=2
+Index=0
+Label=Use Error Threshold
+Default=true
+Description=Perform an action when an error threshold is reached
+
+[ErrorThreshold]
+Type=integer
+Category=Error Threshold
+CategoryOrder=2
+Index=1
+Label=Slave Error Threshold
+Default=50
+Description=The number of errors that must be reported
+
+[ErrorThresholdAction]
+Type=enum
+Values=blacklist;relaunch_slave;restart_machine
+Category=Error Threshold
+CategoryOrder=2
+Index=2
+Label=When error threshold is reached
+Default=relaunch_slave
+Description=Action to perform when error threshold is reached

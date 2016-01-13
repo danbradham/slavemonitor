@@ -1,0 +1,7 @@
+﻿Enabled=True
+Logging=all
+CatchNonZero=True
+NonZeroAction=relaunch_slave
+UseErrorThreshold=True
+ErrorThreshold=10
+ErrorThresholdAction=relaunch_slave
